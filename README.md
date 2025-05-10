@@ -25,29 +25,28 @@ The project predicts whether a loan applicant is 90 days past due based on vario
 - Dropped identifier columns (e.g., Loan ID) from feature set
 - Applied StandardScaler for normalization
 
-## 📊 Initial Model Evaluation
+## Initial Model Evaluation
 - Train/test split: 70%/30%
 - Models: Decision Tree, Random Forest, KNN
-- Evaluated using accuracy, precision, recall, and F1
-- Random Forest performed best in accuracy (85.8%) but needed better recall
+- Evaluated using accuracy, recall, and F1
 
-## 💸 Class Balancing with SMOTE + PCA
+## Class Balancing with SMOTE + PCA
 - Applied SMOTE to balance classes
 - Used PCA to reduce dimensionality (13 components captured ~50% variance)
 
-## 🔧 Hyperparameter Tuning
+##  Hyperparameter Tuning
 - Random Forest tuned with `RandomizedSearchCV`
 - KNN tuned with `GridSearchCV`
 - Best recall scores:
   - Random Forest: 72.86%
   - KNN: 70.26%
 
-## 🔄 Model Comparison & Results
+## Model Comparison & Results
 - Random Forest achieved better recall and F1 than KNN
 - Recall prioritized to avoid false negatives (missing high-risk applicants)
 - Final recall after SMOTE + PCA for Random Forest: 62.71%
 
-## 📖 Conclusion & Future Work
+## Conclusion & Future Work
 
 - Random Forest is most effective for predicting credit risk.
 - Future enhancements:
